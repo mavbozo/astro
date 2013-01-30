@@ -17,78 +17,285 @@
 	<section style="margin-bottom: 51px;">
 	    <article class="container">
 	        <h1><i class="icon-logo"></i> Astro</h1>
-	        <p class="text-big">Mobile-first navigation patterns.</p>
+	        <p class="text-big text-center">Mobile-first navigation patterns.</p>
 
-    	        <p>Astro is a collection of five mobile-first navigation patterns. It's style-light so you can easily modify it to fit your design.</p>
+    	        <p class="text-center">Astro is a collection of five mobile-first navigation patterns. It's style-light so you can easily modify it to fit your design.</p>
 
-	        <p><a class="btn btn-blue" href="https://github.com/cferdinandi/astro"><i class="icon-github"></i> Download on GitHub</a></p>
+	        <p class="text-center"><a class="btn btn-blue" href="https://github.com/cferdinandi/astro"><i class="icon-github"></i> Download on GitHub</a></p>
 
-	        <p class="text-small text-muted">Or keep reading to learn more...</p>
+	        <p class="text-small text-muted text-center">Or keep reading to learn more...</p>
+
+	        <hr>
+
+
+	        <h2>How It Works</h2>
+
+	        <p class="text-center">Each pattern has it's own CSS file and HTML.</p>
+
+	        <p class="text-small">The JavaScript file is shared among all patterns, but only required if you'll be using the collapse-and-expand option for smaller screens.</p>
+	        <p class="text-small">If you're only using the simple pattern, you should also remove small screen specific styling from the CSS.</p>
+
+
+	        <h3>Using Multiple Patterns</h3>
+
+	        <p class="text-small">Each navigation pattern uses the same naming conventions. If you will be using more than one pattern on a project, you'll need to change the class names to avoid conflicts.</p>
+
+	        <p class="text-small">For example, you might rename <code>.nav</code> to <code>.nav-basic</code>.</p>
 
 	        <hr>
 
 
 	        <h2>Basic</h2>
 
-	        <p>A basic, centered navigation and logo.</p>
+	        <p class="text-center">A basic, centered navigation and logo.</p>
 
 
 	        <h3>Simple</h3>
 
+            <nav class="nav-wrap-basic">
+                <a class="logo-basic" href="#">My Brand</a>
+                <ul class="nav-basic">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+
+	        <pre>&lt;nav class="nav-wrap"&gt;
+    &lt;a class="logo" href="#"&gt;My Brand&lt;/a&gt;
+    &lt;ul class="nav"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+
 
 	        <h3>Collapse & Expand</h3>
+
+            <nav class="nav-wrap-basic toggle">
+                <a class="logo-basic" href="#">My Brand</a>
+                <a class="collapse-toggle nav-toggle-basic" href="#nav-menu-basic">Menu &#9660;</a>
+                <div class="nav-collapse-basic" id="nav-menu-basic">
+                    <ul class="nav-basic">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+	        <pre>&lt;nav class="nav-wrap"&gt;
+    &lt;a class="logo" href="#"&gt;My Brand&lt;/a&gt;
+    &lt;a class="collapse-toggle nav-toggle" href="#nav-menu"&gt;Menu &#9660;&lt;/a&gt;
+    &lt;div class="nav-collapse" id="nav-menu"&gt;
+        &lt;ul class="nav"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</pre>
 
 	        <hr>
 
 
 	        <h2>Basic Left</h2>
 
-	        <p>A basic, left-aligned navigation and logo.</p>
+	        <p class="text-center">A basic, left-aligned navigation and logo.</p>
 
 
 	        <h3>Simple</h3>
 
+            <nav class="nav-wrap-basic-left">
+                <a class="logo-basic-left" href="#">My Brand</a>
+                <ul class="nav-basic-left">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+
+	        <pre>&lt;nav class="nav-wrap"&gt;
+    &lt;a class="logo" href="#"&gt;My Brand&lt;/a&gt;
+    &lt;ul class="nav"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+
 
 	        <h3>Collapse & Expand</h3>
+
+            <nav class="nav-wrap-basic-left toggle">
+                <a class="logo-basic-left" href="#">My Brand</a>
+                <a class="collapse-toggle nav-toggle-basic-left" href="#nav-menu-basic-left">Menu &#9660;</a>
+                <div class="nav-collapse-basic-left" id="nav-menu-basic-left">
+                    <ul class="nav-basic-left">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+	        <pre>&lt;nav class="nav-wrap"&gt;
+    &lt;a class="logo" href="#"&gt;My Brand&lt;/a&gt;
+    &lt;a class="collapse-toggle nav-toggle" href="#nav-menu"&gt;Menu &#9660;&lt;/a&gt;
+    &lt;div class="nav-collapse" id="nav-menu"&gt;
+        &lt;ul class="nav"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</pre>
 
 	        <hr>
 
 
 	        <h2>Navbar</h2>
 
-	        <p>An inline logo and navigation.</p>
+	        <p class="text-center">An inline logo and navigation.</p>
 
 
 	        <h3>Simple</h3>
 
+            <nav class="nav-wrap-navbar">
+                <a class="logo-navbar" href="#">My Brand</a>
+                <ul class="nav-navbar">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+
+	        <pre>&lt;nav class="nav-wrap"&gt;
+    &lt;a class="logo" href="#"&gt;My Brand&lt;/a&gt;
+    &lt;ul class="nav"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+
 
 	        <h3>Collapse & Expand</h3>
+
+        <nav class="nav-wrap-navbar toggle">
+            <a class="logo-navbar" href="#">My Brand</a>
+            <a class="collapse-toggle nav-toggle-navbar" href="#nav-menu-navbar">Menu &#9660;</a>
+            <div class="nav-collapse-navbar" id="nav-menu-navbar">
+                <ul class="nav-navbar">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+        </nav>
+
+	        <pre>&lt;nav class="nav-wrap"&gt;
+    &lt;a class="logo" href="#"&gt;My Brand&lt;/a&gt;
+    &lt;a class="collapse-toggle nav-toggle" href="#nav-menu"&gt;Menu &#9660;&lt;/a&gt;
+    &lt;div class="nav-collapse" id="nav-menu"&gt;
+        &lt;ul class="nav"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</pre>
 
 	        <hr>
 
 
 	        <h2>Navbar Left</h2>
 
-	        <p>An inline logo and navigation with navigation aligned to the left.</p>
+	        <p class="text-center">An inline logo and navigation with navigation aligned to the left.</p>
 
 
 	        <h3>Simple</h3>
 
+            <nav class="nav-wrap-navbar-left">
+                <a class="logo-navbar-left" href="#">My Brand</a>
+                <ul class="nav-navbar-left">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+
+	        <pre>&lt;nav class="nav-wrap"&gt;
+    &lt;a class="logo" href="#"&gt;My Brand&lt;/a&gt;
+    &lt;ul class="nav"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+
 
 	        <h3>Collapse & Expand</h3>
+
+        <nav class="nav-wrap-navbar-left toggle">
+            <a class="logo-navbar-left" href="#">My Brand</a>
+            <a class="collapse-toggle nav-toggle-navbar-left" href="#nav-menu-navbar-left">Menu &#9660;</a>
+            <div class="nav-collapse-navbar-left" id="nav-menu-navbar-left">
+                <ul class="nav-navbar-left">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+        </nav>
+
+	        <pre>&lt;nav class="nav-wrap"&gt;
+    &lt;a class="logo" href="#"&gt;My Brand&lt;/a&gt;
+    &lt;a class="collapse-toggle nav-toggle" href="#nav-menu"&gt;Menu &#9660;&lt;/a&gt;
+    &lt;div class="nav-collapse" id="nav-menu"&gt;
+        &lt;ul class="nav"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</pre>
 
 	        <hr>
 
 
 	        <h2>Stacked</h2>
 
-	        <p>Stacked navigation on big screens. Inline navigation on smaller screens.</p>
+	        <p class="text-center">Stacked navigation on big screens. Inline navigation on smaller screens.</p>
 
 
 	        <h3>Simple</h3>
 
+            <nav class="nav-wrap-stacked">
+                <a class="logo-stacked" href="#">My Brand</a>
+                <ul class="nav-stacked">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+
+	        <pre>&lt;nav class="nav-wrap"&gt;
+    &lt;a class="logo" href="#"&gt;My Brand&lt;/a&gt;
+    &lt;ul class="nav"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+
 
 	        <h3>Collapse & Expand</h3>
+
+            <nav class="nav-wrap-stacked toggle">
+                <a class="logo-stacked" href="#">My Brand</a>
+                <a class="collapse-toggle nav-toggle-stacked" href="#nav-menu">Menu &#9660;</a>
+                <div class="nav-collapse-stacked" id="nav-menu">
+                    <ul class="nav-stacked">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+	        <pre>&lt;nav class="nav-wrap"&gt;
+    &lt;a class="logo" href="#"&gt;My Brand&lt;/a&gt;
+    &lt;a class="collapse-toggle nav-toggle" href="#nav-menu"&gt;Menu &#9660;&lt;/a&gt;
+    &lt;div class="nav-collapse" id="nav-menu"&gt;
+        &lt;ul class="nav"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</pre>
 	        
 
         </article>
@@ -97,7 +304,7 @@
 	<footer class="bg-gray">
         <article class="container">
 
-            <p class="text-small text-muted">Built by <a href="http://gomakethings.com">Chris Ferdinandi</a>. Licensed under <a href="http://www.wtfpl.net/">WTFPL</a>.</p>
+            <p class="text-small text-muted text-center">Built by <a href="http://gomakethings.com">Chris Ferdinandi</a>. Licensed under <a href="http://www.wtfpl.net/">WTFPL</a>.</p>
 
         </article>
 	</footer>
