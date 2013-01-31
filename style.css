@@ -755,7 +755,7 @@ button, .btn {
 .logo-navbar {
     display: inline-block;
     font-size: 1.2em;
-    line-height: 1;
+    line-height: 1.2;
     color: #272727;
     margin-bottom: .3em;
     text-decoration: none;
@@ -905,7 +905,7 @@ button, .btn {
 .logo-navbar-left {
     display: inline-block;
     font-size: 1.2em;
-    line-height: 1;
+    line-height: 1.2;
     color: #272727;
     margin-bottom: .3em;
     text-decoration: none;
