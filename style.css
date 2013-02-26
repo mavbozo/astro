@@ -585,6 +585,7 @@ button, .btn {
  *  Only needed for expand-and-collapse option. */
 .nav-toggle-basic {
     display: none;
+    visibility: hidden;
 }
 
 
@@ -599,6 +600,7 @@ button, .btn {
     /*  Display navigation toggle button if javascript is supported */
     .js .toggle .nav-toggle-basic {
         display: block;
+        visibility: visible;
     }
 
     /*  Hide navigation items if javascript is supported */
@@ -688,6 +690,7 @@ button, .btn {
  *  Only needed for expand-and-collapse option. */
 .nav-toggle-basic-left {
     display: none;
+    visibility: hidden;
 }
 
 
@@ -702,6 +705,7 @@ button, .btn {
     /*  Display navigation toggle button if javascript is supported */
     .js .toggle .nav-toggle-basic-left {
         display: block;
+        visibility: visible;
         float: right;
     }
 
@@ -797,6 +801,7 @@ button, .btn {
  *  Only needed for expand-and-collapse option. */
 .nav-toggle-navbar {
     display: none;
+    visibility: hidden;
 }
 
 
@@ -821,6 +826,7 @@ button, .btn {
     /*  Display navigation toggle button if javascript is supported */
     .js .toggle .nav-toggle-navbar {
         display: block;
+        visibility: visible;
         float: right;
     }
 
@@ -947,6 +953,7 @@ button, .btn {
  *  Only needed for expand-and-collapse option. */
 .nav-toggle-navbar-left {
     display: none;
+    visibility: hidden;
 }
 
 
@@ -971,6 +978,7 @@ button, .btn {
     /*  Display navigation toggle button if javascript is supported */
     .js .toggle .nav-toggle-navbar-left {
         display: block;
+        visibility: visible;
         float: right;
     }
 
@@ -1090,6 +1098,7 @@ button, .btn {
  *  Only needed for expand-and-collapse option. */
 .nav-toggle-stacked {
     display: none;
+    visibility: hidden;
 }
 
 
@@ -1104,6 +1113,7 @@ button, .btn {
     /*  Display navigation toggle button if javascript is supported */
     .js .toggle .nav-toggle-stacked {
         display: block;
+        visibility: visible;
         float: right;
     }
 
