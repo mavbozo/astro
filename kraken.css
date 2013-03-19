@@ -747,7 +747,7 @@ select:focus {
 /*  Expand-and-Collapse styling for smaller screens.
  *  Remove if not using.
  *  Change max-width to fit your project. */
-@media (max-width: 680px) {
+@media (max-width: 40em) {
 
     /*  .js prefix ensure content is only hidden when JavaScript is supported.
      *  This requires on the included js-accessibility.js script. */
@@ -852,7 +852,7 @@ select:focus {
 /*  Expand-and-Collapse styling for smaller screens.
  *  Remove if not using.
  *  Change max-width to fit your project. */
-@media (max-width: 680px) {
+@media (max-width: 40em) {
 
     /*  .js prefix ensure content is only hidden when JavaScript is supported.
      *  This requires on the included js-accessibility.js script. */
@@ -963,7 +963,7 @@ select:focus {
 /*  Expand-and-Collapse styling for smaller screens.
  *  Remove if not using.
  *  Change max-width to fit your project. */
-@media (max-width: 680px) {
+@media (max-width: 40em) {
 
     /*  .js prefix ensure content is only hidden when JavaScript is supported.
      *  This requires on the included js-accessibility.js script. */
@@ -1032,7 +1032,7 @@ select:focus {
 /*  Styling for Bigger Screens.
  *  (Astro is built mobile-first.)
  *  Change min-width to fit your project. */
-@media (min-width: 681px) {
+@media (min-width: 40em) {
 
     /*  Align text to the left */
     .nav-wrap-navbar {
@@ -1115,7 +1115,7 @@ select:focus {
 /*  Expand-and-Collapse styling for smaller screens.
  *  Remove if not using.
  *  Change max-width to fit your project. */
-@media (max-width: 680px) {
+@media (max-width: 40em) {
 
     /*  .js prefix ensure content is only hidden when JavaScript is supported.
      *  This requires on the included js-accessibility.js script. */
@@ -1184,7 +1184,7 @@ select:focus {
 /*  Styling for Bigger Screens.
  *  (Astro is built mobile-first.)
  *  Change min-width to fit your project. */
-@media (min-width: 681px) {
+@media (min-width: 40em) {
 
     /*  Align text to the left */
     .nav-wrap-navbar-left {
@@ -1260,7 +1260,7 @@ select:focus {
 /*  Expand-and-Collapse styling for smaller screens.
  *  Remove if not using.
  *  Change max-width to fit your project. */
-@media (max-width: 680px) {
+@media (max-width: 40em) {
 
     /*  .js prefix ensure content is only hidden when JavaScript is supported.
      *  This requires on the included js-accessibility.js script. */
@@ -1310,7 +1310,7 @@ select:focus {
 /*  Styling for Bigger Screens.
  *  (Astro is built mobile-first.)
  *  Change min-width to fit your project. */
-@media (min-width: 681px) {
+@media (min-width: 40em) {
 
     .nav-stacked li {
         display: block;
