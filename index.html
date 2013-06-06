@@ -20,7 +20,7 @@
             <h1 class="text-taller no-space-bottom"><i class="icon-logo"></i> Astro</h1>
             <p class="text-tall text-muted">Mobile-first navigation patterns.</p>
 
-	        <p><a class="btn btn-blue btn-jumbo" href="https://github.com/cferdinandi/astro">Download Astro</a></p>
+	        <p><a class="btn btn-blue btn-jumbo" href="https://github.com/cferdinandi/astro">Download Astro 2</a></p>
 
 	        <p>
 	            <span class="text-small">
@@ -37,317 +37,37 @@
 	    <article class="container">
 
 
-	        <h1 class="text-center" id="more">How It Works</h1>
+	        <h1 class="text-center" id="more">Getting Started</h1>
 
-	        <p>Astro is a collection of five mobile-first navigation patterns:</p>
+	        <p>Astro is a collection of five mobile-first navigation patterns. Each pattern includes an optional expand-and-collapse menu on small screens.</p>
 
 	        <ol>
 	            <li>Basic. A centered navigation and logo.</li>
 	            <li>Basic Left. A left-aligned navigation and logo.</li>
 	            <li>Navbar. An inline navigation and logo.</li>
-	            <li>Navbar. An inline navigation and logo with left-aligned navigation.</li>
+	            <li>Navbar Left. An inline navigation and logo with left-aligned navigation.</li>
 	            <li>Stacked. Stacked navigation on big screens. Inline navigation on smaller screens.</li>
 	        </ol>
 
-
-	        <h2 class="text-center">Two Small-Screen Options</h2>
-
-	        <p>Each pattern has it's own CSS and HTML structure, and comes in two small-screen versions:</p>
-
-	        <ol>
-	            <li>A simple version.</li>
-	            <li>A collapse-and-expand toggle menu option.</li>
-	        </ol>
-
-	        <p>The JavaScript file is the same for all patterns, but only required if you'll be using the collapse-and-expand option for smaller screens. If you're only using the simple pattern, you should also remove small screen specific styling from the CSS.</p>
+	        <hr>
 
 
-	        <h2 class="text-center">Using Multiple Patterns</h2>
+	        <h1 class="text-center">Using Multiple Patterns</h1>
 
 	        <p>For simpicity, each navigation pattern uses the same naming conventions. If you will be using more than one pattern on a project, you'll need to change the class names to avoid conflicts.</p>
 
-	        <p>For example, you might rename <code>.nav</code> to <code>.nav-basic</code>.</p>
-
-	        <p class="text-muted text-center">Keep reading to explore the different navigation patterns...</p>
+	        <p>For example, if you were combining Astro Basic and Astro Stacked, you might rename <code>.nav</code> to <code>.nav-basic</code> and <code>.nav-stacked</code>, respectively.</p>
 
 	        <hr>
-
-
-	        <h1 class="text-center">Basic</h1>
-
-	        <p>A basic, centered navigation and logo.</p>
-
-
-	        <h2 class="text-center">Simple</h2>
-
-            <nav class="nav-wrap-basic">
-                <a class="logo-basic" href="#">My Brand</a>
-                <ul class="nav-basic">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </nav>
-
-	        <pre>&lt;nav class="nav-wrap"&gt;
-    &lt;a class="logo" href="#"&gt;My Brand&lt;/a&gt;
-    &lt;ul class="nav"&gt;
-        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/nav&gt;</pre>
-
-
-	        <h2 class="text-center">Collapse & Expand</h2>
-
-            <nav class="nav-wrap-basic toggle">
-                <a class="logo-basic" href="#">My Brand</a>
-                <a class="nav-toggle nav-toggle-basic" href="#nav-menu-basic">Menu &#9660;</a>
-                <div class="nav-collapse-basic" id="nav-menu-basic">
-                    <ul class="nav-basic">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                    </ul>
-                </div>
-            </nav>
-
-	        <pre>&lt;nav class="nav-wrap"&gt;
-    &lt;a class="logo" href="#"&gt;My Brand&lt;/a&gt;
-    &lt;a class="nav-toggle" href="#nav-menu"&gt;Menu &#9660;&lt;/a&gt;
-    &lt;div class="nav-collapse" id="nav-menu"&gt;
-        &lt;ul class="nav"&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-&lt;/nav&gt;</pre>
-
-	        <hr>
-
-
-	        <h1 class="text-center">Basic Left</h1>
-
-	        <p>A basic, left-aligned navigation and logo.</p>
-
-
-	        <h2 class="text-center">Simple</h2>
-
-            <nav class="nav-wrap-basic-left">
-                <a class="logo-basic-left" href="#">My Brand</a>
-                <ul class="nav-basic-left">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </nav>
-
-	        <pre>&lt;nav class="nav-wrap"&gt;
-    &lt;a class="logo" href="#"&gt;My Brand&lt;/a&gt;
-    &lt;ul class="nav"&gt;
-        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/nav&gt;</pre>
-
-
-	        <h2 class="text-center">Collapse & Expand</h2>
-
-            <nav class="nav-wrap-basic-left toggle">
-                <a class="logo-basic-left" href="#">My Brand</a>
-                <a class="nav-toggle nav-toggle-basic-left" href="#nav-menu-basic-left">Menu &#9660;</a>
-                <div class="nav-collapse-basic-left" id="nav-menu-basic-left">
-                    <ul class="nav-basic-left">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                    </ul>
-                </div>
-            </nav>
-
-	        <pre>&lt;nav class="nav-wrap"&gt;
-    &lt;a class="logo" href="#"&gt;My Brand&lt;/a&gt;
-    &lt;a class="nav-toggle" href="#nav-menu"&gt;Menu &#9660;&lt;/a&gt;
-    &lt;div class="nav-collapse" id="nav-menu"&gt;
-        &lt;ul class="nav"&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-&lt;/nav&gt;</pre>
-
-	        <hr>
-
-
-	        <h1 class="text-center">Navbar</h1>
-
-	        <p>An inline logo and navigation.</p>
-
-
-	        <h2 class="text-center">Simple</h2>
-
-            <nav class="nav-wrap-navbar">
-                <a class="logo-navbar" href="#">My Brand</a>
-                <ul class="nav-navbar">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </nav>
-
-	        <pre>&lt;nav class="nav-wrap"&gt;
-    &lt;a class="logo" href="#"&gt;My Brand&lt;/a&gt;
-    &lt;ul class="nav"&gt;
-        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/nav&gt;</pre>
-
-
-	        <h2 class="text-center">Collapse & Expand</h2>
-
-        <nav class="nav-wrap-navbar toggle">
-            <a class="logo-navbar" href="#">My Brand</a>
-            <a class="nav-toggle nav-toggle-navbar" href="#nav-menu-navbar">Menu &#9660;</a>
-            <div class="nav-collapse-navbar" id="nav-menu-navbar">
-                <ul class="nav-navbar">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </div>
-        </nav>
-
-	        <pre>&lt;nav class="nav-wrap"&gt;
-    &lt;a class="logo" href="#"&gt;My Brand&lt;/a&gt;
-    &lt;a class="nav-toggle" href="#nav-menu"&gt;Menu &#9660;&lt;/a&gt;
-    &lt;div class="nav-collapse" id="nav-menu"&gt;
-        &lt;ul class="nav"&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-&lt;/nav&gt;</pre>
-
-	        <hr>
-
-
-	        <h1 class="text-center">Navbar Left</h1>
-
-	        <p>An inline logo and navigation with navigation aligned to the left.</p>
-
-
-	        <h2 class="text-center">Simple</h2>
-
-            <nav class="nav-wrap-navbar-left">
-                <a class="logo-navbar-left" href="#">My Brand</a>
-                <ul class="nav-navbar-left">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </nav>
-
-	        <pre>&lt;nav class="nav-wrap"&gt;
-    &lt;a class="logo" href="#"&gt;My Brand&lt;/a&gt;
-    &lt;ul class="nav"&gt;
-        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/nav&gt;</pre>
-
-
-	        <h2 class="text-center">Collapse & Expand</h2>
-
-        <nav class="nav-wrap-navbar-left toggle">
-            <a class="logo-navbar-left" href="#">My Brand</a>
-            <a class="nav-toggle nav-toggle-navbar-left" href="#nav-menu-navbar-left">Menu &#9660;</a>
-            <div class="nav-collapse-navbar-left" id="nav-menu-navbar-left">
-                <ul class="nav-navbar-left">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </div>
-        </nav>
-
-	        <pre>&lt;nav class="nav-wrap"&gt;
-    &lt;a class="logo" href="#"&gt;My Brand&lt;/a&gt;
-    &lt;a class="nav-toggle" href="#nav-menu"&gt;Menu &#9660;&lt;/a&gt;
-    &lt;div class="nav-collapse" id="nav-menu"&gt;
-        &lt;ul class="nav"&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-&lt;/nav&gt;</pre>
-
-	        <hr>
-
-
-	        <h1 class="text-center">Stacked</h1>
-
-	        <p>Stacked navigation on big screens. Inline navigation on smaller screens.</p>
-
-
-	        <h2 class="text-center">Simple</h2>
-
-            <nav class="nav-wrap-stacked">
-                <a class="logo-stacked" href="#">My Brand</a>
-                <ul class="nav-stacked">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </nav>
-
-	        <pre>&lt;nav class="nav-wrap"&gt;
-    &lt;a class="logo" href="#"&gt;My Brand&lt;/a&gt;
-    &lt;ul class="nav"&gt;
-        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/nav&gt;</pre>
-
-
-	        <h2 class="text-center">Collapse & Expand</h2>
-
-            <nav class="nav-wrap-stacked toggle">
-                <a class="logo-stacked" href="#">My Brand</a>
-                <a class="nav-toggle nav-toggle-stacked" href="#nav-menu">Menu &#9660;</a>
-                <div class="nav-collapse-stacked" id="nav-menu">
-                    <ul class="nav-stacked">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                    </ul>
-                </div>
-            </nav>
-
-	        <pre>&lt;nav class="nav-wrap"&gt;
-    &lt;a class="logo" href="#"&gt;My Brand&lt;/a&gt;
-    &lt;a class="nav-toggle" href="#nav-menu"&gt;Menu &#9660;&lt;/a&gt;
-    &lt;div class="nav-collapse" id="nav-menu"&gt;
-        &lt;ul class="nav"&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-&lt;/nav&gt;</pre>
-
-            <hr>
 
 
             <h1 class="text-center">Navigation Toggle</h1>
 
-            <p>If you're using the collapse-and-expand toggle menu on smaller screens, you can use either an <code>&lt;a&gt;</code> or a <code>&lt;button&gt;</code> element to toggle to the collapsed content.</p>
+            <p>If you're using the optional expand-and-collapse menu on small screens, you can use either an <code>&lt;a&gt;</code> or a <code>&lt;button&gt;</code> element to toggle to the menu content.</p>
 
-            <p>A little snippet of jQuery matches the <code>href</code> or <code>data-target</code> value to the ID of the menu. Then, it adds or removes the <code>.active</code> class from the collapsed element.</p>
+            <p>Include a <code>data-target</code> attribute that matches the ID of the menu.</p>
 
-            <p>CSS shows or hides the content based on the presence of that class.</p>
-
-            <h2 class="text-center">Using a Link</h2>
-
-            <pre>&lt;a class="nav-toggle" href="#nav-menu"&gt;Menu&lt;/a&gt;
-&lt;div class="nav-collapse" id="nav-menu"&gt;
-    ...
-&lt;/div&gt;</pre>
-
-            <h2 class="text-center">Using a Button</h2>
-
-            <p>For <code>&lt;button&gt;</code> elements, use the CSS3 <code>data-target</code> attribute. The use of href with <code>&lt;button&gt;</code> element is not valid HTML.</p>
-
-            <pre>&lt;button class="nav-toggle nav-toggle" data-target="#nav-menu"&gt;Menu&lt;/button&gt;
+            <pre>&lt;a class="nav-toggle" data-target="#nav-menu" href="#"&gt;Menu&lt;/a&gt;
 &lt;div class="nav-collapse" id="nav-menu"&gt;
     ...
 &lt;/div&gt;</pre>
@@ -364,23 +84,27 @@
 /*      Add your styles here */
 /*  } */</pre>
 
-            <p>If you're using WordPress, check out <a href="http://www.toddmotto.com/highlight-your-current-page-with-wordpress-conditionals">this great tutorial by Todd Motto</a> on how to add the <code>.active</code> class using a simple PHP function.</p>
+            <p><em><strong>Note:</strong> If you're using WordPress, check out <a href="http://www.toddmotto.com/highlight-your-current-page-with-wordpress-conditionals">this great tutorial by Todd Motto</a> on how to add the <code>.active</code> class using a simple PHP function.</em></p>
 
             <hr>
 
 
             <h1 class="text-center">Progressively Enhanced</h1>
 
-            <p>By default, small screen users are shown the full navigation menu.</p>
+            <p>If you're using the optional expand-and-collapse menu, small screen users are shown the full navigation menu by default.</p>
 
-            <p>Astro includes the <a href="http://cferdinandi.github.com/js-accessibility/">JS Accessibility snippet</a>, which adds a <code>.js</code> class to the <code>&lt;body&gt;</code> on page load. This activates the expand-and-collapse menu (if you've chosen that option).</p>
+            <p>Astro includes a script that checks for JavaScript support by adding a <code>.js</code> class to the <code>&lt;body&gt;</code> on page load. This activates expand-and-collapse menu, hiding the menu content and showing the toggle menu button.</p>
+
+            <p>That way, people without JavaScript support still have access to your site navigation.</p>
 
             <hr>
 
 
-            <h1 class="text-center">Requires jQuery</h1>
+            <h1 class="text-center">Browser Support</h1>
 
-            <p>Astro requires <a href="http://jquery.com/">jQuery</a>.</p>
+            <p>Astro works in all modern browsers and IE 8 and above.</p>
+
+            <p>If you're using the optional expand-and-collapse menu for smaller screens, Astro also requires <a href="http://jquery.com/">jQuery</a>.</p>
 
         </article>
 	</section>
