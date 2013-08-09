@@ -1,94 +1,77 @@
 /* =============================================================
- * ios-orientation-change-fix.js v1.0.0
- * Fixes zoom on rotation bug in iOS.
- * Script by @scottjehl, rebound by @wilto
- * https://github.com/scottjehl/iOS-Orientationchange-Fix
- * MIT / GPLv2 License
+
+    Astro v3.0
+    Mobile-first navigation patterns by Chris Ferdinandi.
+    http://gomakethings.com
+
+    Free to use under the MIT License.
+    http://gomakethings.com/mit/
+    
  * ============================================================= */
-
-(function(w){
-	
-	// This fix addresses an iOS bug, so return early if the UA claims it's something else.
-	var ua = navigator.userAgent;
-	if( !( /iPhone|iPad|iPod/.test( navigator.platform ) && /OS [1-5]_[0-9_]* like Mac OS X/i.test(ua) && ua.indexOf( "AppleWebKit" ) > -1 ) ){
-		return;
-	}
-
-    var doc = w.document;
-
-    if( !doc.querySelector ){ return; }
-
-    var meta = doc.querySelector( "meta[name=viewport]" ),
-        initialContent = meta && meta.getAttribute( "content" ),
-        disabledZoom = initialContent + ",maximum-scale=1",
-        enabledZoom = initialContent + ",maximum-scale=10",
-        enabled = true,
-		x, y, z, aig;
-
-    if( !meta ){ return; }
-
-    function restoreZoom(){
-        meta.setAttribute( "content", enabledZoom );
-        enabled = true;
-    }
-
-    function disableZoom(){
-        meta.setAttribute( "content", disabledZoom );
-        enabled = false;
-    }
-	
-    function checkTilt( e ){
-		aig = e.accelerationIncludingGravity;
-		x = Math.abs( aig.x );
-		y = Math.abs( aig.y );
-		z = Math.abs( aig.z );
-				
-		// If portrait orientation and in one of the danger zones
-        if( (!w.orientation || w.orientation === 180) && ( x > 7 || ( ( z > 6 && y < 8 || z < 8 && y > 6 ) && x > 5 ) ) ){
-			if( enabled ){
-				disableZoom();
-			}        	
-        }
-		else if( !enabled ){
-			restoreZoom();
-        }
-    }
-	
-	w.addEventListener( "orientationchange", restoreZoom, false );
-	w.addEventListener( "devicemotion", checkTilt, false );
-
-})( this );
-
-
-
 
 
 /* =============================================================
- * astro.js v1.0.0
- * Mobile-first navigation patterns.
- * Script by Chris Ferdinandi - http://gomakethings.com
- * Licensed under WTFPL - http://www.wtfpl.net/
+    CLASS HANDLERS
+    https://gist.github.com/cferdinandi/6146930
  * ============================================================= */
 
-$(function () {
-    $('.nav-toggle').click(function(e) { // When a link or button with the .nav-toggle class is clicked
-        e.preventDefault(); // Prevent the default action from occurring
-        var dataID = $(this).attr('data-target'); // dataID is the data-target value
-        $(dataID).toggleClass('active'); // Add or remove the .active class from the element whose ID matches the data-target value
+// Check if an element has a class
+var hasClass = function (elem, className) {
+    return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+}
+
+// Add a class to an element
+var addClass = function (elem, className) {
+    if (!hasClass(elem, className)) {
+        elem.className += ' ' + className;
+    }
+}
+
+// Remove a class from an element
+var removeClass = function (elem, className) {
+    var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
+    if (hasClass(elem, className)) {
+        while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+            newClass = newClass.replace(' ' + className + ' ', ' ');
+        }
+        elem.className = newClass.replace(/^\s+|\s+$/g, '');
+    }
+}
+
+
+/* =============================================================
+    ASTRO FUNCTIONS
+    Toggle the navigation menu.
+ * ============================================================= */
+
+// "Cut the Mustard" test
+if ( 'querySelector' in document && 'addEventListener' in window ) {
+
+    // Get all '.nav-toggle' elements
+    var navToggle = document.querySelectorAll('.nav-toggle');
+
+    // For each '.nav-toggle'
+    [].forEach.call(navToggle, function (toggle) {
+
+        // When '.nav-toggle' clicked
+        toggle.addEventListener('click', function(e) {
+
+            // Prevent the default action from occurring
+            e.preventDefault();
+
+            // Get target navigation menu
+            var dataID = this.dataset.target;
+            var dataTarget = document.querySelector(dataID);
+
+            // If the menu has an '.active' class, remove it
+            if ( hasClass(dataTarget, 'active') ) {
+                removeClass(dataTarget, 'active');
+            }
+            // Otherwise, add the '.active' class
+            else {
+                addClass(dataTarget, 'active');
+            }
+            
+        }, false);
     });
-});
-
-
-
-
-
-/* =============================================================
- * js-accessibility.js v1.0.0
- * Adds .js class to <body> for progressive enhancement.
- * Script by Chris Ferdinandi - http://gomakethings.com
- * Licensed under WTFPL - http://www.wtfpl.net
- * ============================================================= */
-
-$(function () {
-    $('body').addClass('js'); // On page load, add the .js class to the <body> element.
-});
+}
