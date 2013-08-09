@@ -20,7 +20,7 @@
             <h1 class="text-taller no-space-bottom"><i class="icon-logo"></i> Astro</h1>
             <p class="text-tall text-muted">Mobile-first navigation patterns.</p>
 
-	        <p><a class="btn btn-blue btn-jumbo" href="https://github.com/cferdinandi/astro">Download Astro 2</a></p>
+	        <p><a class="btn btn-blue btn-jumbo" href="https://github.com/cferdinandi/astro">Download Astro 3</a></p>
 
 	        <p>
 	            <span class="text-small">
@@ -39,15 +39,30 @@
 
 	        <h1 class="text-center" id="more">Getting Started</h1>
 
-	        <p>Astro is a collection of five mobile-first navigation patterns. Each pattern includes an optional expand-and-collapse menu on small screens.</p>
+	        <p>Astro is a collection of five mobile-first navigation patterns. The "plus" version of each pattern includes an expand-and-collapse menu on small screens.</p>
 
-	        <ol>
-	            <li><a href="basic.html">Basic.</a> A centered navigation and logo.</li>
-	            <li><a href="basic-left.html">Basic Left.</a> A left-aligned navigation and logo.</li>
-	            <li><a href="navbar.html">Navbar.</a> An inline navigation and logo.</li>
-	            <li><a href="navbar-left.html">Navbar Left.</a> An inline navigation and logo with left-aligned navigation.</li>
-	            <li><a href="stacked.html">Stacked.</a> Stacked navigation on big screens. Inline navigation on smaller screens.</li>
-	        </ol>
+	        <ul class="list-unstyled">
+	            <li class="space-bottom-small">
+	                <a href="basic.html">Basic</a> | <a href="basic-plus.html">Basic Plus</a><br>
+	                A centered navigation and logo.
+                </li>
+	            <li class="space-bottom-small">
+	                <a href="basic-left.html">Basic Left</a> | <a href="basic-left-plus.html">Basic Left Plus</a><br>
+	                A left-aligned navigation and logo.
+	            </li>
+	            <li class="space-bottom-small">
+	                <a href="navbar.html">Navbar</a> | <a href="navbar-plus.html">Navbar Plus</a><br>
+	                An inline navigation and logo.
+	            </li>
+	            <li class="space-bottom-small">
+	                <a href="navbar-left.html">Navbar Left</a> | <a href="navbar-left-plus.html">Navbar Left Plus</a><br>
+	                An inline navigation and logo with left-aligned navigation.
+	            </li>
+	            <li class="space-bottom-small">
+	                <a href="stacked.html">Stacked</a> | <a href="stacked-plus.html">Stacked Plus</a><br>
+	                Stacked navigation and logo.
+	            </li>
+	        </ul>
 
 	        <hr>
 
@@ -59,20 +74,6 @@
 	        <p>For example, if you were combining Astro Basic and Astro Stacked, you might rename <code>.nav</code> to <code>.nav-basic</code> and <code>.nav-stacked</code>, respectively.</p>
 
 	        <hr>
-
-
-            <h1 class="text-center">Navigation Toggle</h1>
-
-            <p>If you're using the optional expand-and-collapse menu on small screens, you can use either an <code>&lt;a&gt;</code> or a <code>&lt;button&gt;</code> element to toggle to the menu content.</p>
-
-            <p>Include a <code>data-target</code> attribute that matches the ID of the menu.</p>
-
-            <pre>&lt;a class="nav-toggle" data-target="#nav-menu" href="#"&gt;Menu&lt;/a&gt;
-&lt;div class="nav-collapse" id="nav-menu"&gt;
-    ...
-&lt;/div&gt;</pre>
-
-            <hr>
 
 
             <h1 class="text-center">Active Link Styling</h1>
@@ -89,22 +90,11 @@
             <hr>
 
 
-            <h1 class="text-center">Progressively Enhanced</h1>
-
-            <p>If you're using the optional expand-and-collapse menu, small screen users are shown the full navigation menu by default.</p>
-
-            <p>Astro includes a script that checks for JavaScript support by adding a <code>.js</code> class to the <code>&lt;body&gt;</code> on page load. This activates expand-and-collapse menu, hiding the menu content and showing the toggle menu button.</p>
-
-            <p>That way, people without JavaScript support still have access to your site navigation.</p>
-
-            <hr>
-
-
             <h1 class="text-center">Browser Support</h1>
 
-            <p>Astro works in all modern browsers and IE 8 and above.</p>
+            <p>Astro works in all modern browsers, and IE 8 and above.</p>
 
-            <p>If you're using the optional expand-and-collapse menu for smaller screens, Astro also requires <a href="http://jquery.com/">jQuery</a>.</p>
+            <p>Because IE 8 does not recognize media queries, it will receive the small-screen navigation option even on big screens (<a href="http://gomakethings.com/mobile-first-and-internet-explorer/">learn more about mobile-first and IE</a>). The "plus" versions of Astro require modern JavaScript API's that are supported in IE 9 and later. IE 8 will instead get the basic navigation option.</p>
 
         </article>
 	</section>
