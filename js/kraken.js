@@ -1,6 +1,6 @@
 /* =============================================================
 
-    Astro v3.0
+    Astro v3.1
     Mobile-first navigation patterns by Chris Ferdinandi.
     http://gomakethings.com
 
@@ -60,7 +60,7 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
             e.preventDefault();
 
             // Get target navigation menu
-            var dataID = this.dataset.target;
+            var dataID = this.getAttribute('data-target');
             var dataTarget = document.querySelector(dataID);
 
             // If the menu has an '.active' class, remove it
